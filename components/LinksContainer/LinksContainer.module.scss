@@ -1,0 +1,32 @@
+@import "styles/variables.scss";
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+  @media(max-width: 720px) {
+   gap: 4px; 
+  }
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid $light-blue;
+  border-radius: 4px;
+}
+.linkIcon {
+  height: 18px;
+  width: 18px;
+}
+.link {
+  font-size: 18px;
+  padding: 8px;
+  @media(max-width: 720px) {
+   font-size: 12px;
+   padding: 4px; 
+  }
+}

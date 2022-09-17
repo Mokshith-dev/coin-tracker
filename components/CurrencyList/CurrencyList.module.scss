@@ -1,0 +1,134 @@
+@import "styles/variables";
+
+.currencyListContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  @media(max-width: 720px) {
+    width: 100%;
+    margin: 0;
+    overflow: auto;
+  }
+}
+.dataHeadContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  padding: 13px;
+  @media(max-width: 720px) {
+    align-items: center;
+  }
+}
+.dataHead {
+  width: 20%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  @media(max-width: 720px) {
+    padding: 5px;
+    font-size: 12px;
+    font-weight: medium;
+  }
+}
+.dataHeadRank {
+  text-align: center;
+}
+.dataHeadCoin {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  cursor: pointer;
+}
+.dataHeadMarketCap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.buttonContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  @media(max-width: 720px) {
+    gap: 15px;
+  }
+}
+.navButton {
+  width: 165px;
+  padding: 15px;
+  outline: none;
+  background-color: white;
+  border-radius: 5px;
+  color: $light-blue;
+  border: 2px solid $light-blue;
+  font-size: 18px;
+  margin-left: 50px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    &:after {
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      transition: 0.75s;
+    }
+  }
+  @media(max-width: 720px) {
+    width: 75px;
+    margin-left: 0;
+    margin-bottom: 50px;
+    font-size: 12px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navButtonPrev {
+  span {
+    &:after {
+      content: "\003c";
+      left: 0px;
+    }
+  }
+  &:hover {
+    span {
+      padding-right: 10px;
+      &:after {
+        opacity: 1;
+        left: -15px;
+      }
+    }
+  }
+ 
+}
+.navButtonNext {
+  span {
+    &:after {
+      content: "\003e";
+      right: 0px;
+      @media(max-width: 720px) {
+        display: none;
+      }
+    }
+  }
+  &:hover {
+    span {
+      padding-left: 10px;
+      &:after {
+        opacity: 1;
+        right: -15px;
+      }
+    }
+  }
+}

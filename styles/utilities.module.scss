@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.positiveNumber {
+  color: $positive-number;
+}
+.negativeNumber {
+  color: $negative-number;
+}
